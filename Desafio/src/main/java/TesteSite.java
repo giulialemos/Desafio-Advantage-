@@ -14,17 +14,7 @@ public class TesteSite {
 		driver.manage().window().maximize();
 		driver.get("http://advantageonlineshopping.com/#/");
 		driver.quit();
-	}
-	
-	@Test
-	public void cadastro() {
-		WebDriver driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.get("http://advantageonlineshopping.com/#/");
-		driver.findElement(By.id("menuUser")).click();
-		driver.findElement(By.id("menuUser")).click();
-		driver.findElement(By.linkText("CREATE NEW ACCOUNT")).click();
-		driver.get("http://advantageonlineshopping.com/#/register");
+
 	}
 	
 	@Test
