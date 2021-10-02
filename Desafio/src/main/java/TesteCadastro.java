@@ -21,7 +21,20 @@ public class TesteCadastro {
 			e.printStackTrace();
 		}
 		driver.findElement(By.linkText("CREATE NEW ACCOUNT")).click();
-		driver.get("http://advantageonlineshopping.com/#/register");
+		//driver.get("http://advantageonlineshopping.com/#/register");
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		driver.findElement(By.name("usernameRegisterPage")).click();
+		driver.findElement(By.name("usernameRegisterPage")).sendKeys("Giulia");
+		driver.findElement(By.name("emailRegisterPage")).click();
+		driver.findElement(By.name("emailRegisterPage")).sendKeys("giulia.lemos@keeggo.com");
+		driver.findElement(By.name("passwordRegisterPage")).click();
+		driver.findElement(By.name("passwordRegisterPage")).sendKeys("Keeggo@2021");
+		driver.findElement(By.name("confirm_passwordRegisterPage")).click();
+		driver.findElement(By.name("confirm_passwordRegisterPage")).sendKeys("Keeggo@2021");
 		
 	}
 }
