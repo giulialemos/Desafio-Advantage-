@@ -1,3 +1,4 @@
+package br.com.desafio.advange;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TesteCadastro {
+	
 	@Test
 	public void cadastro() throws InterruptedException {
 		WebDriver driver = new FirefoxDriver();
@@ -35,6 +37,9 @@ public class TesteCadastro {
 		driver.findElement(By.name("passwordRegisterPage")).sendKeys("Keeggo@2021");
 		driver.findElement(By.name("confirm_passwordRegisterPage")).click();
 		driver.findElement(By.name("confirm_passwordRegisterPage")).sendKeys("Keeggo@2021");
+		driver.findElement(By.name("i_agree")).click();
+		driver.findElement(By.id("register_btnundefined")).click();
+		driver.quit();
 		
 	}
 }
