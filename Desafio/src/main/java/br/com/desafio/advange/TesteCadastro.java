@@ -1,4 +1,6 @@
 package br.com.desafio.advange;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,11 +10,22 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TesteCadastro {
 	
-	@Test
-	public void cadastro() throws InterruptedException {
-		WebDriver driver = new FirefoxDriver();
+private WebDriver driver;
+	
+	@Before
+	public void inicializar() {
+		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get("http://advantageonlineshopping.com/#/");
+	}
+	
+	@After
+	public void finalizar() {
+		driver.quit();
+	}
+	
+	@Test
+	public void cadastro() throws InterruptedException {
 		driver.findElement(By.id("menuUser")).click();
 		driver.findElement(By.id("menuUser")).click();
 		WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -23,7 +36,6 @@ public class TesteCadastro {
 			e.printStackTrace();
 		}
 		driver.findElement(By.linkText("CREATE NEW ACCOUNT")).click();
-		//driver.get("http://advantageonlineshopping.com/#/register");
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
@@ -39,8 +51,6 @@ public class TesteCadastro {
 		driver.findElement(By.name("confirm_passwordRegisterPage")).sendKeys("Keeggo@2021");
 		driver.findElement(By.name("i_agree")).click();
 		driver.findElement(By.id("register_btnundefined")).click();
-		driver.quit();
-		
 	}
 }
 
