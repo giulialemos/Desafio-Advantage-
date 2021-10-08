@@ -8,13 +8,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TesteLogin {
 	
-private WebDriver driver;
+	private WebDriver driver;
+	private DSL dsl;
 	
 	@Before
 	public void inicializar() {
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get("http://advantageonlineshopping.com/#/");
+		dsl = new DSL(driver);
 	}
 	
 	@After
@@ -24,17 +26,17 @@ private WebDriver driver;
 	
 	@Test
 	public void login() {
-		driver.findElement(By.id("menuUser")).click();
-		driver.findElement(By.id("menuUser")).click();
+		dsl.clicar("menuUser");
+		dsl.clicar("menuUser");
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		driver.findElement(By.name("username")).click();
-		driver.findElement(By.name("username")).sendKeys("Giulia");
-		driver.findElement(By.name("password")).click();
-		driver.findElement(By.name("password")).sendKeys("Keeggo@2021");
-		driver.findElement(By.id("sign_in_btnundefined")).click();
+		dsl.clicarName("username");
+		dsl.escreverName("username", "Giulia");
+		dsl.clicarName("password");
+		dsl.escreverName("password", "Keeggo@2021");
+		dsl.clicar("sign_in_btnundefined");
 	}
 }

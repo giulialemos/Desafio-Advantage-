@@ -10,13 +10,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TesteCadastro {
 	
-private WebDriver driver;
+	private WebDriver driver;
+	private DSL dsl;
 	
 	@Before
 	public void inicializar() {
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get("http://advantageonlineshopping.com/#/");
+		dsl = new DSL(driver);
 	}
 	
 	@After
@@ -26,8 +28,8 @@ private WebDriver driver;
 	
 	@Test
 	public void cadastro() throws InterruptedException {
-		driver.findElement(By.id("menuUser")).click();
-		driver.findElement(By.id("menuUser")).click();
+		dsl.clicar("menuUser");
+		dsl.clicar("menuUser");
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("CREATE NEW ACCOUNT")));
 		try {
@@ -35,22 +37,22 @@ private WebDriver driver;
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		driver.findElement(By.linkText("CREATE NEW ACCOUNT")).click();
+		dsl.clicarLink("CREATE NEW ACCOUNT");
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		driver.findElement(By.name("usernameRegisterPage")).click();
-		driver.findElement(By.name("usernameRegisterPage")).sendKeys("Giulia");
-		driver.findElement(By.name("emailRegisterPage")).click();
-		driver.findElement(By.name("emailRegisterPage")).sendKeys("giulia.lemos@keeggo.com");
-		driver.findElement(By.name("passwordRegisterPage")).click();
-		driver.findElement(By.name("passwordRegisterPage")).sendKeys("Keeggo@2021");
-		driver.findElement(By.name("confirm_passwordRegisterPage")).click();
-		driver.findElement(By.name("confirm_passwordRegisterPage")).sendKeys("Keeggo@2021");
-		driver.findElement(By.name("i_agree")).click();
-		driver.findElement(By.id("register_btnundefined")).click();
+		dsl.clicarName("usernameRegisterPage");
+		dsl.escreverName("usernameRegisterPage", "Giulia");
+		dsl.clicarName("emailRegisterPage");
+		dsl.escreverName("emailRegisterPage", "giulia.lemos@keeggo.com");
+		dsl.clicarName("passwordRegisterPage");
+		dsl.escreverName("passwordRegisterPage", "Keeggo@2021");
+		dsl.clicarName("confirm_passwordRegisterPage");
+		dsl.escreverName("confirm_passwordRegisterPage", "Keeggo@2021");
+		dsl.clicarName("i_agree");
+		dsl.clicar("register_btnundefined");
 	}
 }
 

@@ -27,10 +27,9 @@ public class TesteConsultarProduto {
 
 	@Test
 	public void consultarProduto() {
-		driver.findElement(By.id("menuSearch")).click();
-		driver.findElement(By.id("autoComplete")).sendKeys("headphones");
-		driver.findElement(By.id("menuSearch")).click();
-		Assert.assertEquals("headphones", driver.findElement(By.id("autoComplete")).getAttribute("value"));
-		driver.quit();
+		dsl.clicar("menuSearch");
+		dsl.escrever("autoComplete", "headphones");
+		dsl.clicar("menuSearch");
+		Assert.assertEquals("headphones", dsl.obterValorCampo("autoComplete"));
 	}
 }
