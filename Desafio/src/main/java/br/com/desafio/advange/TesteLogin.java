@@ -1,4 +1,5 @@
 package br.com.desafio.advange;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,10 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TesteLogin {
-	
+
 	private WebDriver driver;
 	private DSL dsl;
-	
+
 	@Before
 	public void inicializar() {
 		driver = new FirefoxDriver();
@@ -18,12 +19,12 @@ public class TesteLogin {
 		driver.get("http://advantageonlineshopping.com/#/");
 		dsl = new DSL(driver);
 	}
-	
+
 	@After
 	public void finalizar() {
 		driver.quit();
 	}
-	
+
 	@Test
 	public void login() {
 		dsl.clicar("menuUser");
@@ -34,9 +35,9 @@ public class TesteLogin {
 			e.printStackTrace();
 		}
 		dsl.clicarName("username");
-		dsl.escreverName("username", "Giulia");
+		dsl.escreverName("username", "GiMaria");
 		dsl.clicarName("password");
-		dsl.escreverName("password", "Keeggo@2021");
+		dsl.escreverName("password", "Maria123");
 		dsl.clicar("sign_in_btnundefined");
 	}
 }

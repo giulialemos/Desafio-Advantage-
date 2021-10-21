@@ -1,5 +1,7 @@
 package br.com.desafio.advange;
+
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -8,11 +10,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+//import junit.framework.Assert;
+
 public class TesteCadastro {
-	
+
 	private WebDriver driver;
 	private DSL dsl;
-	
+
 	@Before
 	public void inicializar() {
 		driver = new FirefoxDriver();
@@ -20,12 +24,12 @@ public class TesteCadastro {
 		driver.get("http://advantageonlineshopping.com/#/");
 		dsl = new DSL(driver);
 	}
-	
-	@After
-	public void finalizar() {
-		driver.quit();
-	}
-	
+
+	// @After
+	// public void finalizar() {
+	// driver.quit();
+	// }
+
 	@Test
 	public void cadastro() throws InterruptedException {
 		dsl.clicar("menuUser");
@@ -44,15 +48,18 @@ public class TesteCadastro {
 			e.printStackTrace();
 		}
 		dsl.clicarName("usernameRegisterPage");
-		dsl.escreverName("usernameRegisterPage", "Giulia");
+		dsl.escreverName("usernameRegisterPage", "GiMaria");
 		dsl.clicarName("emailRegisterPage");
-		dsl.escreverName("emailRegisterPage", "giulia.lemos@keeggo.com");
+		dsl.escreverName("emailRegisterPage", "maria@keeggo.com");
 		dsl.clicarName("passwordRegisterPage");
-		dsl.escreverName("passwordRegisterPage", "Keeggo@2021");
+		dsl.escreverName("passwordRegisterPage", "Maria123");
 		dsl.clicarName("confirm_passwordRegisterPage");
-		dsl.escreverName("confirm_passwordRegisterPage", "Keeggo@2021");
+		dsl.escreverName("confirm_passwordRegisterPage", "Maria123");
 		dsl.clicarName("i_agree");
 		dsl.clicar("register_btnundefined");
+
+		// Assert.assertEquals("Glemos", dsl.obterValorCampo("menuUserLink"));
+		
+
 	}
 }
-

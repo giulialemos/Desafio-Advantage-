@@ -1,10 +1,11 @@
 package br.com.desafio.advange;
+
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TesteSite {
-	
+
 	@Test
 	public void site() {
 		WebDriver driver = new FirefoxDriver();
