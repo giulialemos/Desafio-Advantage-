@@ -9,9 +9,13 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		plugin = "pretty",
 		monochrome = true,
 		snippets = SnippetType.CAMELCASE,
-		dryRun = false
-		//strict = true
+		dryRun = false,
+		strict = true
 		)
+
 public class Runner {
 
 }
+
+//  Não consegui ver necessidade de colocar tag no meu runner e classes, 
+//  pois deixei tudo de uma forma bem simples, sem muitas informações específicas.

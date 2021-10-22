@@ -35,6 +35,7 @@ public class TesteConsultarProduto {
 		dsl.clicar("menuSearch");
 		Assert.assertEquals("headphones", dsl.obterValorCampo("autoComplete"));
 
+		
 		// dsl.clicar("2200");
 
 		// dsl.clicarLink("View All");

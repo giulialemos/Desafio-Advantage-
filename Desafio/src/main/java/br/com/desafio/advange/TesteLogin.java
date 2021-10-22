@@ -35,9 +35,9 @@ public class TesteLogin {
 			e.printStackTrace();
 		}
 		dsl.clicarName("username");
-		dsl.escreverName("username", "GiMaria");
+		dsl.escreverName("username", "Vanusia");
 		dsl.clicarName("password");
-		dsl.escreverName("password", "Maria123");
+		dsl.escreverName("password", "Vavu123");
 		dsl.clicar("sign_in_btnundefined");
 	}
 }

@@ -8,19 +8,18 @@ public class FazerLogin {
 		
 	}
 
-	@Entao("no AAA insiro \"(.*)\" e no BBB insiro \"(.*2)\"")
-	public void no_aaa_insiro_e_no_bbb_insiro(String arg, String arg1) {
-
+	@Entao("preencho USERNAME e PASSWORD cadastrados no cenario anterior")
+	public void preenchoUsernameEPasswordCadastradosNoCenarioAnterior() {
+		
 	}
 
-	@Entao("depois clicar em ENTER")
-	public void depoisClicarEmEnter() {
-
+	@Entao("depois clicar em SIGN IN")
+	public void depoisClicarEmSignIn() {
+		
 	}
 
-	@Entao("termos conta logada")
-	public void termosContaLogada() {
-
+	@Entao("teremos a conta logada")
+	public void teremosAContaLogada() {
+	    
 	}
-
 }

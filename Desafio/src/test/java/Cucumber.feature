@@ -10,9 +10,15 @@ Cenario: Fazer cadastro
 Cenario: Fazer login
 	Dado que estou na tela inicial
 	Quando clico no MENU USER 
-	Entao no AAA insiro "usuario" e no BBB insiro "senha"
-	E depois clicar em ENTER
-	Entao termos conta logada
+	Entao preencho USERNAME e PASSWORD cadastrados no cenario anterior
+	E depois clicar em SIGN IN
+	Entao teremos a conta logada
+	
+Cenario: Pesquisar produto
+ Dado que estamos na tela inicial
+ Quando clicamos MENU SEARCH 
+ Entao digitamos o produto desejado
+ E clicamos em alguma opcao 
 	
 
 	

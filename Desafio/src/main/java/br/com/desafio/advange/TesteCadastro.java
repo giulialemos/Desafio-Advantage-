@@ -25,10 +25,10 @@ public class TesteCadastro {
 		dsl = new DSL(driver);
 	}
 
-	// @After
-	// public void finalizar() {
-	// driver.quit();
-	// }
+	@After
+	public void finalizar() {
+	driver.quit();
+	}
 
 	@Test
 	public void cadastro() throws InterruptedException {
@@ -48,13 +48,13 @@ public class TesteCadastro {
 			e.printStackTrace();
 		}
 		dsl.clicarName("usernameRegisterPage");
-		dsl.escreverName("usernameRegisterPage", "GiMaria");
+		dsl.escreverName("usernameRegisterPage", "Vanusia");
 		dsl.clicarName("emailRegisterPage");
-		dsl.escreverName("emailRegisterPage", "maria@keeggo.com");
+		dsl.escreverName("emailRegisterPage", "vanusia@keeggo.com");
 		dsl.clicarName("passwordRegisterPage");
-		dsl.escreverName("passwordRegisterPage", "Maria123");
+		dsl.escreverName("passwordRegisterPage", "Vavu123");
 		dsl.clicarName("confirm_passwordRegisterPage");
-		dsl.escreverName("confirm_passwordRegisterPage", "Maria123");
+		dsl.escreverName("confirm_passwordRegisterPage", "Vavu123");
 		dsl.clicarName("i_agree");
 		dsl.clicar("register_btnundefined");
 
