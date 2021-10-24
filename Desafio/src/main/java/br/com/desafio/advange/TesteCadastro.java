@@ -48,17 +48,17 @@ public class TesteCadastro {
 			e.printStackTrace();
 		}
 		dsl.clicarName("usernameRegisterPage");
-		dsl.escreverName("usernameRegisterPage", "Vanusia");
+		dsl.escreverName("usernameRegisterPage", "Francisco");
 		dsl.clicarName("emailRegisterPage");
-		dsl.escreverName("emailRegisterPage", "vanusia@keeggo.com");
+		dsl.escreverName("emailRegisterPage", "chico@lemos.com");
 		dsl.clicarName("passwordRegisterPage");
-		dsl.escreverName("passwordRegisterPage", "Vavu123");
+		dsl.escreverName("passwordRegisterPage", "Chico123");
 		dsl.clicarName("confirm_passwordRegisterPage");
-		dsl.escreverName("confirm_passwordRegisterPage", "Vavu123");
+		dsl.escreverName("confirm_passwordRegisterPage", "Chico123");
 		dsl.clicarName("i_agree");
 		dsl.clicar("register_btnundefined");
 
-		// Assert.assertEquals("Glemos", dsl.obterValorCampo("menuUserLink"));
+		// Assert.assertEquals("Francisco", dsl.obterValorCampo("menuUserLink"));
 		
 
 	}
