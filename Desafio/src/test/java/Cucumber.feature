@@ -1,32 +1,31 @@
 # language: pt
 Funcionalidade: Teste Cadastro
 
-@cadastro
+	@cadastro
 Cenario: Fazer cadastro
 	Dado que estou na tela inicial
-	Quando clico no MENU USER e depois em CREATE NEW ACCOUNT
-	Entao na tela de cadastro preencho no username "Francisco"
-	E no email "chico@lemos.com"
-	E na password "Chico123"
-	E na confirm password "Chico123"
+	Quando clico no MENU USER  
+	E depois clico em CREATE NEW ACCOUNT
+	Entao na tela de cadastro preencho no usernameregisterpage "Francis"
+	E no emailregisterpage "chicco@lemos.com"
+	E na passwordregisterpage "Chic234"
+	E na confirmpasswordregisterpage "Chic234"
 	E clicar no botao I GREE
 	E depois clicar em REGISTER
-
-@login	
+	
+	@login	
 Cenario: Fazer login
 	Dado que estou na tela inicial
 	Quando clico no MENU USER 
-	Entao preencho no username "Francisco"
-	E na password "Chico123"
+	Entao preencho no username "Francis"
+	E na password "Chic234"
 	E depois clicar em SIGN IN
 	Entao teremos a conta logada
-
-@pesquisa	
+	
+		@pesquisa	
 Cenario: Pesquisar produto
  Dado que estou na tela inicial
  Quando clico MENU SEARCH 
  Entao digito "Headphones" para pesquisa
  E clicamos em alguma opcao 
-	
-
 	

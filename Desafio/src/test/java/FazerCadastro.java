@@ -1,4 +1,5 @@
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
@@ -12,7 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class FazerCadastro {
 
 	private WebDriver driver;
-
+	
+	
 	@Dado("que estou na tela inicial")
 	public void queEstouNaTelaInicial() {
 		driver = new FirefoxDriver();
@@ -20,10 +22,16 @@ public class FazerCadastro {
 
 	}
 
-	@Quando("clico no MENU USER e depois em CREATE NEW ACCOUNT")
-	public void clicoNoMenuUserEDepoisEmCreateNewAccount() {
+	@Quando("clico no MENU USER")
+	public void clicloNoMenuUser() {
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		driver.findElement(By.id("menuUser")).click();
 		driver.findElement(By.id("menuUser")).click();
+
+	}
+
+	@Entao("depois clico em CREATE NEW ACCOUNT")
+	public void depoisClicoEmCreateNewAccount() {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("CREATE NEW ACCOUNT")));
 		try {
@@ -40,27 +48,27 @@ public class FazerCadastro {
 
 	}
 
-	@Entao("na tela de cadastro insiro no username {string}")
-	public void naTelaDeCadastroPreenchoNoUsername(String string) {
-		driver.findElement(By.name("usernameRegisterPage")).sendKeys("string");
+	@Entao("na tela de cadastro preencho no usernameregisterpage {string}")
+	public void naTelaDeCadastroPreenchoNoUsernameregisterpage(String string) {
+		driver.findElement(By.name("usernameRegisterPage")).sendKeys("Francis");
 
 	}
 
-	@Entao("no email {string}")
-	public void noEmail(String string) {
-		driver.findElement(By.name("emailRegisterPage")).sendKeys("string");
+	@Entao("no emailregisterpage {string}")
+	public void noEmailregisterpage(String string) {
+		driver.findElement(By.name("emailRegisterPage")).sendKeys("chicco@lemos.com");
 
 	}
 
-	@Entao("na password {string}")
-	public void naPassword(String string) {
-		driver.findElement(By.name("passwordRegisterPage")).sendKeys("string");
+	@Entao("na passwordregisterpage {string}")
+	public void naPasswordregisterpage(String string) {
+		driver.findElement(By.name("passwordRegisterPage")).sendKeys("Chic234");
 
 	}
 
-	@Entao("na confirm password {string}")
-	public void naConfirmPassword(String string) {
-		driver.findElement(By.name("confirm_passwordRegisterPage")).sendKeys("string");
+	@Entao("na confirmpasswordregisterpage {string}")
+	public void naConfirmpasswordregisterpage(String string) {
+		driver.findElement(By.name("confirm_passwordRegisterPage")).sendKeys("Chic234");
 
 	}
 
@@ -76,11 +84,14 @@ public class FazerCadastro {
 
 	}
 
-	@After
-	public void fecharBrowser() {
-		driver.quit();
-	}
+	//@After
+	//public void fecharBrowser() {
+		//driver.quit();
+	//}
+
 }
+
+
 
 /////////////////////////////////////////////
 

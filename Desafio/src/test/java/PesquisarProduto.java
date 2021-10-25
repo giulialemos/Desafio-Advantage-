@@ -10,18 +10,15 @@ import io.cucumber.java.pt.Quando;
 public class PesquisarProduto {
 
 	private WebDriver driver;
-
+	
 	@Quando("clico MENU SEARCH")
-	public void clicoMenuSearch() {
-		driver = new FirefoxDriver();
-		driver.get("http://advantageonlineshopping.com/#/");
+	public void clico_menu_search() {
 		driver.findElement(By.id("menuSearch")).click();
-		
 	}
 
 	@Entao("digito {string} para pesquisa")
 	public void digitoParaPesquisa(String string) {
-		driver.findElement(By.id("autoComplete")).sendKeys("string");
+		driver.findElement(By.id("autoComplete")).sendKeys("Headphones");
 	}
 
 	@Entao("clicamos em alguma opcao")
@@ -29,10 +26,10 @@ public class PesquisarProduto {
 		
 	}
 	
-	@After
-	public void fecharBrowser() {
-		driver.quit();
-	}
+	//@After
+	//public void fecharBrowser() {
+		//driver.quit();
+	//}
 
 }
 

@@ -6,7 +6,8 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		tags = "@login",
+		//features = "src/test/resources/features/FazerCadastro.feature",
+		tags = "@cadastro",
 		plugin = {"pretty","html:target/report-html"},
 		monochrome = true,
 		snippets = SnippetType.CAMELCASE,
