@@ -28,13 +28,13 @@ public class FazerLogin {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		driver.findElement(By.id("menuUser")).click();
 		driver.findElement(By.id("menuUser")).click();
-		driver.findElement(By.name("username")).sendKeys("Francis");
+		driver.findElement(By.name("username")).sendKeys("LuccaLemos");
 
 	}
 
 	@Entao("na password {string}")
 	public void na_password(String string) {
-		driver.findElement(By.name("password")).sendKeys("Chic234");
+		driver.findElement(By.name("password")).sendKeys("Lucca123");
 
 	}
 

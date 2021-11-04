@@ -50,25 +50,25 @@ public class FazerCadastro {
 
 	@Entao("na tela de cadastro preencho no usernameregisterpage {string}")
 	public void naTelaDeCadastroPreenchoNoUsernameregisterpage(String string) {
-		driver.findElement(By.name("usernameRegisterPage")).sendKeys("Francis");
+		driver.findElement(By.name("usernameRegisterPage")).sendKeys("LuccaLemos");
 
 	}
 
 	@Entao("no emailregisterpage {string}")
 	public void noEmailregisterpage(String string) {
-		driver.findElement(By.name("emailRegisterPage")).sendKeys("chicco@lemos.com");
+		driver.findElement(By.name("emailRegisterPage")).sendKeys("lucca@lemos.com");
 
 	}
 
 	@Entao("na passwordregisterpage {string}")
 	public void naPasswordregisterpage(String string) {
-		driver.findElement(By.name("passwordRegisterPage")).sendKeys("Chic234");
+		driver.findElement(By.name("passwordRegisterPage")).sendKeys("Lucca123");
 
 	}
 
 	@Entao("na confirmpasswordregisterpage {string}")
 	public void naConfirmpasswordregisterpage(String string) {
-		driver.findElement(By.name("confirm_passwordRegisterPage")).sendKeys("Chic234");
+		driver.findElement(By.name("confirm_passwordRegisterPage")).sendKeys("Lucca123");
 
 	}
 

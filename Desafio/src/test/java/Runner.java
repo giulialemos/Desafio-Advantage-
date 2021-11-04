@@ -18,8 +18,3 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 public class Runner {
 
 }
-
-////////////
-// Dúvidas: - string no lugar dos nomes e senhas...
-//          - se deveria abrir um cucumber para cada testes, pois tive problemas nas execuções
-//          - não tive a opção de screenshot, acredito que seja verão do java que esta mais atualizado que o do professor...
